@@ -3857,13 +3857,13 @@ var belts = [
 belts.forEach(function (x) {
     if (x.price < 25) {
         $('.main-container').append('<div class="container"></div>')
-        $('.container').last().append('<div class="box1" style="background-image: url(' + x.Images[0].url_170x135 + ')">', '<div class="box2"><p class="price">Price: $' + x.price + '</p><p class="quantity">Quantity Available: ' + x.quantity + '</p></div>');
+        $('.container').last().append('<a href="' + x.url + '"><div class="box1" style="background-image: url(' + x.Images[0].url_170x135 + ')">', '<div class="box2"><p class="price">Price: $' + x.price + '</p><p class="quantity">Quantity Available: ' + x.quantity + '</p></div></a>');
 
     }
 })
 
 
-//Trying to print belts with sude in the tags - not working
+//Trying to print belts with suede in the tags - not working
 var beltTags = belts.map(function (belt) {
   return belt.tags; 
 })
